@@ -100,4 +100,7 @@ body {
     height: 45px;
     background: transparent;
     border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font
  }
