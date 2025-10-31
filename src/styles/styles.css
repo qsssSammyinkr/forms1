@@ -104,6 +104,8 @@ body {
     font-size: 16px;
     font-weight: 600;
     border: 2px solid #ff2770;
+    overflow: hidden;
+    z-index: 1;
  }
 
  .btn::before {
@@ -114,6 +116,10 @@ body {
     background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
     top: 0;
     left: 0;
+    
  }
 
- .btn::before
+ .btn:hover:before {
+    top: 0;
+
+ }
