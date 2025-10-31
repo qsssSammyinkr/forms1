@@ -207,7 +207,7 @@ body {
   height: 700px;
   width: 850px;
   background: #25252b;
-  border-top: ;
+  border-top: 3px solid #ff2770;
   transform: rotate(0deg) skewY(0deg);
   transform-origin: bottom right;
 }
