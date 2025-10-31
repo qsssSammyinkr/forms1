@@ -1,17 +1,13 @@
 const container = document.querySelector('.container');
+const SignUpLink = document.querySelector('.SignUpLink');
+const SignInLink = document.querySelector('.SignInLink');
 
-const SignUpLinks = document.querySelectorAll('.SignUpLink');
-SignUpLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    container.classList.add('active');
-  });
+SignUpLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.add('active');
 });
 
-const SignInLinks = document.querySelectorAll('.SignInLink');
-SignInLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    container.classList.remove('active');
-  });
+SignInLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.remove('active');
 });

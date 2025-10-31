@@ -26,24 +26,21 @@ body {
   overflow: hidden;
 }
 
-/* Form Boxes */
-.form-box {
+/* FORM BOX - esquerda e direita */
+.container .form-box {
   position: absolute;
   top: 0;
-  left: 0;
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 40px;
-  transition: all 0.8s ease;
+  transition: transform 1s ease;
 }
 
-.form-box.Register {
-  left: 100%;
-  opacity: 0;
-}
+.form-box.Login { left: 0; }
+.form-box.Register { right: 0; display: none; }
 
 .input-box {
   position: relative;
@@ -73,7 +70,7 @@ body {
 }
 
 .input-box input:focus,
-.input-box input:valid {
+.input-box input:valid { 
   border-bottom: 2px solid #ff2770;
 }
 
@@ -87,23 +84,21 @@ body {
 }
 
 .input-box input:focus ~ i,
-.input-box input:valid ~ i {
-  color: #ff2770;
-}
+.input-box input:valid ~ i { color: #ff2770; }
 
-/* Buttons */
 .btn {
+  position: relative;
   width: 100%;
   height: 45px;
-  border-radius: 40px;
-  border: 2px solid #ff2770;
   background: transparent;
+  border-radius: 40px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
-  margin-top: 25px;
-  position: relative;
+  border: 2px solid #ff2770;
   overflow: hidden;
+  z-index: 1;
+  margin-top: 25px;
 }
 
 .btn::before {
@@ -118,47 +113,41 @@ body {
   transition: .5s;
 }
 
-.btn:hover::before {
-  top: 0;
-}
+.btn:hover:before { top: 0; }
 
-/* Links */
 .regi-link {
+  font-size: 14px;
   text-align: center;
   margin: 20px 0 10px;
-  font-size: 14px;
 }
 
 .regi-link a {
   color: #ff2770;
   font-weight: 600;
+  text-decoration: none;
 }
+.regi-link a:hover { text-decoration: underline; }
 
-.regi-link a:hover {
-  text-decoration: underline;
-}
-
-/* Info Content */
+/* INFO CONTENT */
 .info-content {
   position: absolute;
   top: 0;
-  right: 0;
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: right;
-  padding: 0 40px 60px 150px;
-  transition: all 0.8s ease;
+  padding: 0 40px;
+  text-align: center;
 }
 
-.info-content.Register {
-  right: -50%;
-  opacity: 0;
-}
+.info-content.Login { right: 0; text-align: right; }
+.info-content.Register { right: 0; text-align: right; display: none; }
 
-/* Curved shapes */
+.info-content h2 { font-size: 36px; text-transform: uppercase; line-height: 1.3; }
+.info-content p { font-size: 16px; margin-top: 10px; }
+
+/* TRIÂNGULO LOGIN */
 .curved-shape {
   position: absolute;
   right: 0;
@@ -171,40 +160,34 @@ body {
   transition: 1.5s ease;
 }
 
+/* TRIÂNGULO REGISTER (mesma proporção) */
 .curved-shape2 {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background: #25252b;
-  border-top: 3px solid #ff2770;
-  transform: rotate(-39deg) skewY(-78deg);
-  transform-origin: top right;
+  left: 0;
+  top: -5px;
+  height: 600px;
+  width: 850px;
+  background: linear-gradient(45deg,#25252b,#ff2770);
+  transform: rotate(-10deg) skewY(-40deg);
+  transform-origin: bottom left;
   transition: 1.5s ease;
 }
 
-/* Active states */
-.container.active .form-box.Login {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-.container.active .form-box.Register {
-  left: 0;
-  opacity: 1;
-}
-
+/* Estados ativos */
+.container.active .form-box.Login,
 .container.active .info-content.Login {
-  transform: translateX(-100%);
-  opacity: 0;
+  display: none;
 }
 
+.container.active .form-box.Register,
 .container.active .info-content.Register {
-  right: 0;
-  opacity: 1;
+  display: flex;
+}
+
+.container.active .curved-shape {
+  transform: rotate(-10deg) skewY(-40deg);
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(-30deg) skewY(-10deg);
+  transform: rotate(10deg) skewY(40deg);
 }
