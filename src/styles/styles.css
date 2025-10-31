@@ -11,5 +11,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min
+    min-height: 100vh;
+    background: red;
+}
+
+.container {
+    
 }
