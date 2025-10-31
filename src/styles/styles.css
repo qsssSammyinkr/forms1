@@ -75,10 +75,9 @@ body {
     transition: .5s;
  }
  
- .input-box input:focus ~ label,
- .input-box input:valid ~ label {
+ .input-box input:focus,
+ .input-box input:valid { 
     top: -5px;
-    color: #ff2770;
  }
 
 .input-box i {
