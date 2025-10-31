@@ -191,14 +191,13 @@ body {
   height: 600px;
   width: 850px;
   background: linear-gradient(45deg,#25252b,#ff2770);
-      transform: rotate(10deg) skewY(40deg);
-  transform: rotate(0deg) skewY(0deg);
+  transform: rotate(10deg) skewY(40deg);
   transform-origin: bottom right;
   transition: 1.5s ease;
 }
 
 .container.active .curved-shape {
-    transform: rotate(10deg) skewY(40deg);
+    transform: rotate(0deg) skewY(0deg);
 }
 
 .container .curved-shape2 {
@@ -211,3 +210,5 @@ body {
   transform: rotate(10deg) skewY(40deg);
   transform-origin: bottom right;
 }
+
+.container.container.active
