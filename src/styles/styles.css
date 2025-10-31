@@ -216,9 +216,8 @@ body {
   transition: 1.5s ease;
 }
 
-co.active .curved-shape2 {
-  transform: rotate(-1deg) skewY(-10deg);
-  transition: 1.5 ease;
+.container.active .curved-shape2 {
+  transform: rotate(-30deg) skewY(-10deg);
   transition-delay: 1.2s;
 }
 
