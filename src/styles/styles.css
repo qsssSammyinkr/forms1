@@ -174,5 +174,6 @@ body {
     height: 600px;
     width: 850px;
     background: linear-gradient(45deg,#25252b,#ff2770);
-    transform: ;
+    transform: rotate(10deg) skew(40deg);
+    transform-origin: bottom ;
  }
