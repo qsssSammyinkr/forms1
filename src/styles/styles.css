@@ -65,20 +65,4 @@ body {
     padding-right: 23px;
 }
 
-.input-box i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.btn {
-    margin-top: 30px;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #ff2770;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
     
