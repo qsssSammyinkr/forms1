@@ -6,7 +6,7 @@
 # Inclui logs, proteção e commit inteligente.
 # =========================================================
 
-INTERVAL=300  # tempo em segundos (5 minutos)
+INTERVAL=10  # tempo em segundos (5 minutos)
 BRANCH=$(git branch --show-current)
 
 echo "🚀 Auto Commit iniciado na branch '$BRANCH'..."
