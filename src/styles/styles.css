@@ -46,7 +46,7 @@ body {
 }
 
 .form-box.Login .animation {
-    transform: ;
+    transform: translateY(-120%);
 }
 
 .form-box h2 {
