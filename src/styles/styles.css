@@ -111,5 +111,9 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(#25252b, #ff2770,);
+    background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
+    top: 0;
+    left: 0;
  }
+
+ .btn::before
