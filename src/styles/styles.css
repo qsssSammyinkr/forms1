@@ -21,12 +21,11 @@ body {
   width: 750px;
   height: 450px;
   border: 2px solid #ff2770;
-  box-shadow: 0 0 25px #ff2770;
   border-radius: 15px;
   overflow: hidden;
 }
 
-/* FORM BOX - esquerda */
+/* FORM BOX */
 .form-box {
   position: absolute;
   top: 0;
@@ -42,13 +41,7 @@ body {
 .form-box.Register {
   display: none;
   right: 0;
-  padding: 0 40px;
-}
-
-.form-box h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
+  padding: 40px;
 }
 
 .input-box {
@@ -99,33 +92,32 @@ body {
 
 /* Botão */
 .btn {
-  position: relative;
   width: 100%;
   height: 45px;
+  border: 2px solid #ff2770;
   background: transparent;
   border-radius: 40px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  border: 2px solid #ff2770;
-  overflow: hidden;
-  z-index: 1;
+  cursor: pointer;
   margin-top: 25px;
+  overflow: hidden;
+  position: relative;
 }
 
 .btn::before {
   content: "";
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
   top: -100%;
   left: 0;
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.btn:hover:before {
+.btn:hover::before {
   top: 0;
 }
 
@@ -136,7 +128,6 @@ body {
 }
 
 .regi-link a {
-  background: none;
   color: #ff2770;
   font-weight: 600;
 }
@@ -145,18 +136,19 @@ body {
   text-decoration: underline;
 }
 
-/* INFO CONTENT - direita */
+/* INFO CONTENT */
 .info-content {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: flex-end;
   padding: 0 40px;
+  z-index: 2;
 }
 
 .info-content.Register {
@@ -165,43 +157,37 @@ body {
 
 .info-content h2 {
   font-size: 36px;
-  text-transform: uppercase;
-  line-height: 1.3;
+  margin-bottom: 10px;
 }
 
 .info-content p {
   font-size: 16px;
-  margin-top: 10px;
 }
 
-/* Curvas de fundo */
+/* Triângulos de fundo */
 .curved-shape {
   position: absolute;
-  top: -150px;
-  right: -100px;
-  width: 500px;
-  height: 650px;
-  background: linear-gradient(135deg, #ff2770, #ff66a3);
-  border-top-left-radius: 300px;
-  border-bottom-left-radius: 300px;
-  transition: 1s ease;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #ff2770; /* vermelho */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
   z-index: 0;
 }
 
 .curved-shape2 {
   position: absolute;
-  top: -100px;
-  right: -50px;
-  width: 450px;
-  height: 600px;
-  background: #25252b;
-  border-top-left-radius: 250px;
-  border-bottom-left-radius: 250px;
-  transition: 1s ease;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #25252b; /* preto */
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   z-index: 1;
 }
 
-/* Estados ativos (Register) */
+/* Toggle Login/Register */
 .container.active .form-box.Login,
 .container.active .info-content.Login {
   display: none;
@@ -210,12 +196,4 @@ body {
 .container.active .form-box.Register,
 .container.active .info-content.Register {
   display: flex;
-}
-
-.container.active .curved-shape {
-  transform: rotate(-10deg);
-}
-
-.container.active .curved-shape2 {
-  transform: rotate(-12deg);
 }
