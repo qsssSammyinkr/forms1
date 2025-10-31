@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 'Poppins';
+    color: #fff;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: red;
+    background: #25252b;
 }
 
 .container {
