@@ -215,7 +215,7 @@ body {
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(-11deg) skewY(-7deg); /* animação suave para toggle */
+  transform: rotate(-4deg) skewY(-28deg); /* animação suave para toggle */
 }
 
 /* Alternância de formulários */
