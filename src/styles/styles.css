@@ -37,9 +37,9 @@ body {
     padding: 40px;
 }
 
-.form-box .Login {
+.form-box.Login {
     left: 0;
-    padding: 0;
+    padding: 0 40px;
 }
 
 .form-box h2 {
@@ -65,4 +65,4 @@ body {
     padding-right: 23px;
 }
 
-    
+ .input-box    
