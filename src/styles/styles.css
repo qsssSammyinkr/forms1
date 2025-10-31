@@ -26,10 +26,11 @@ body {
   overflow: hidden;
 }
 
-/* Formulários */
+/* Form Boxes */
 .form-box {
   position: absolute;
   top: 0;
+  left: 0;
   width: 50%;
   height: 100%;
   display: flex;
@@ -38,22 +39,18 @@ body {
   padding: 40px;
   transition: all 0.8s ease;
 }
+
 .form-box.Register {
   left: 100%;
-}
-.container.active .form-box.Login {
-  left: -50%;
-}
-.container.active .form-box.Register {
-  left: 50%;
+  opacity: 0;
 }
 
-/* Inputs */
 .input-box {
   position: relative;
   width: 100%;
   margin-top: 25px;
 }
+
 .input-box input {
   width: 100%;
   background: transparent;
@@ -64,6 +61,7 @@ body {
   color: #fff;
   padding-right: 23px;
 }
+
 .input-box label {
   position: absolute;
   top: 50%;
@@ -73,10 +71,12 @@ body {
   color: #fff;
   transition: .5s;
 }
+
 .input-box input:focus,
-.input-box input:valid { 
+.input-box input:valid {
   border-bottom: 2px solid #ff2770;
 }
+
 .input-box i {
   position: absolute;
   top: 50%;
@@ -85,25 +85,77 @@ body {
   transform: translateY(-50%);
   transition: .5s;
 }
+
 .input-box input:focus ~ i,
 .input-box input:valid ~ i {
   color: #ff2770;
 }
 
-/* Botão */
+/* Buttons */
 .btn {
-  position: relative;
   width: 100%;
   height: 45px;
-  background: transparent;
   border-radius: 40px;
-  cursor: pointer;
+  border: 2px solid #ff2770;
+  background: transparent;
   font-size: 16px;
   font-weight: 600;
-  border: 2px solid #ff2770;
-  overflow: hidden;
-  z-index: 1;
+  cursor: pointer;
   margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn:hover::before {
+  top: 0;
+}
+
+/* Links */
+.regi-link {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 14px;
+}
+
+.regi-link a {
+  color: #ff2770;
+  font-weight: 600;
+}
+
+.regi-link a:hover {
+  text-decoration: underline;
+}
+
+/* Info Content */
+.info-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  padding: 0 40px 60px 150px;
+  transition: all 0.8s ease;
+}
+
+.info-content.Register {
+  right: -50%;
+  opacity: 0;
 }
 
 /* Curved shapes */
@@ -118,9 +170,7 @@ body {
   transform-origin: bottom right;
   transition: 1.5s ease;
 }
-.container.active .curved-shape {
-  transform: rotate(0deg) skewY(0deg);
-}
+
 .curved-shape2 {
   position: absolute;
   right: 0;
@@ -128,28 +178,33 @@ body {
   height: 100%;
   width: 50%;
   background: #25252b;
+  border-top: 3px solid #ff2770;
   transform: rotate(-39deg) skewY(-78deg);
   transform-origin: top right;
   transition: 1.5s ease;
 }
-.container.active .curved-shape2 {
-  transform: rotate(-4deg) skewY(-19deg);
+
+/* Active states */
+.container.active .form-box.Login {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
-/* Mensagem fixa */
-.info-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0 40px;
+.container.active .form-box.Register {
+  left: 0;
+  opacity: 1;
 }
-.Login-text { display: block; }
-.Register-text { display: none; }
-.container.active .Login-text { display: none; }
-.container.active .Register-text { display: block; }
+
+.container.active .info-content.Login {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.container.active .info-content.Register {
+  right: 0;
+  opacity: 1;
+}
+
+.container.active .curved-shape2 {
+  transform: rotate(-30deg) skewY(-10deg);
+}
