@@ -37,6 +37,11 @@ body {
     padding: 40px;
 }
 
+.form-box .Login {
+    left: 0;
+    padding: 0;
+}
+
 .form-box h2 {
     font-size: 32px;
     text-align: center;
@@ -76,11 +81,4 @@ body {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ff458a;
-}
+    
