@@ -114,12 +114,14 @@ body {
     height: 100%;
     width: 100%;
     background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
-    top: 0;
+    top: -100%;
     left: 0;
-    
+    z-index: -1;
+    transition: .5s;
  }
 
  .btn:hover:before {
     top: 0;
-
  }
+
+ .regi
