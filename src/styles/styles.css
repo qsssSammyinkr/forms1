@@ -152,5 +152,7 @@ body {
 
  .info-content.Login {
     right: 0;
-    text-align: ;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 0 40px 60px ;
  }
