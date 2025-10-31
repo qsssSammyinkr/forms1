@@ -86,5 +86,11 @@ body {
     top: 50%;
     right: 0;
     font-size: 18px;
-    transform: tr;
+    transform: translateY(-50%);
 }
+
+ .input-box input:focus ~ label,
+ .input-box input:valid ~ label {
+    top: -5px;
+    color: #ff2770;
+ }
