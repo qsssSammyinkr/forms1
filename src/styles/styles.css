@@ -1,68 +1,232 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; color:#fff; }
-body { display:flex; justify-content:center; align-items:center; min-height:100vh; background:#25252b; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1a1a1f, #0f0f13);
+  overflow: hidden;
+}
+
+/* Container principal */
 .container {
-  position: relative; width: 750px; height: 450px;
-  border: 2px solid #ff2770; border-radius:15px;
-  box-shadow:0 0 25px #ff2770; overflow:hidden;
-  transition: all 0.7s ease;
+  position: relative;
+  width: 750px;
+  height: 460px;
+  border: 1px solid rgba(255, 39, 112, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 39, 112, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(37, 37, 43, 0.6);
+  transition: all 0.8s ease;
 }
 
-/* Form boxes */
+/* Formulários */
 .form-box {
-  position:absolute; top:0; left:0; width:50%; height:100%;
-  display:flex; flex-direction:column; justify-content:center;
-  padding:40px; transition: transform 0.7s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  transition: transform 0.8s ease;
 }
 
-.form-box.Register { left: 750px; } /* fora da tela inicialmente */
+.form-box.Register {
+  left: 750px;
+}
 
-.input-box { position:relative; width:100%; margin-top:25px; }
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ff2770;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 39, 112, 0.8);
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+}
+
 .input-box input {
-  width:100%; background:transparent; border:none; border-bottom:2px solid #fff;
-  outline:none; font-size:16px; color:#fff; padding-right:23px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 25px 10px 0;
+  transition: 0.3s;
 }
-.input-box label { position:absolute; top:50%; left:0; transform:translateY(-50%); font-size:16px; transition:0.5s; }
-.input-box input:focus, .input-box input:valid { border-bottom:2px solid #ff2770; }
-.input-box i { position:absolute; top:50%; right:0; transform:translateY(-50%); }
 
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: #ff2770;
+  font-size: 13px;
+}
+
+.input-box input:focus {
+  border-bottom: 2px solid #ff2770;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #ff2770;
+}
+
+/* Botão */
 .btn {
-  width:100%; height:45px; border-radius:40px; border:2px solid #ff2770;
-  background:transparent; cursor:pointer; font-weight:600; margin-top:25px; position:relative; overflow:hidden;
+  width: 100%;
+  height: 45px;
+  border-radius: 40px;
+  border: 2px solid #ff2770;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  color: #ff2770;
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
-.btn::before {
-  content:""; position:absolute; width:100%; height:100%; top:-100%; left:0;
-  background:linear-gradient(#25252b,#ff2770,#25252b,#ff2770); z-index:-1; transition:0.5s;
-}
-.btn:hover::before { top:0; }
 
-.regi-link { font-size:14px; text-align:center; margin-top:20px; }
-.regi-link a { color:#ff2770; font-weight:600; } 
-.regi-link a:hover { text-decoration:underline; }
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: linear-gradient(180deg, #ff2770, #25252b);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  color: #fff;
+  box-shadow: 0 0 15px #ff2770;
+}
+
+.btn:hover::before {
+  top: 0;
+}
+
+/* Link */
+.regi-link {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.regi-link a {
+  color: #ff2770;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.regi-link a:hover {
+  text-decoration: underline;
+}
 
 /* Info content */
 .info-content {
-  position:absolute; top:0; right:0; width:50%; height:100%;
-  display:flex; flex-direction:column; justify-content:center; text-align:center; padding:0 40px;
-  transition: transform 0.7s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: transform 0.8s ease;
 }
 
-.info-content.Register { right: -50%; }
-
-/* Quadrados coloridos */
-.curved-shape, .curved-shape2 {
-  position:absolute; top:0; height:100%; width:50%; transition: all 0.7s ease;
+.info-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
 }
-.curved-shape { right:0; background: linear-gradient(to right,#25252b 20%, #ff2770 100%); }
-.curved-shape2 { right:0; background: linear-gradient(to right,#25252b 50%, #ff2770 100%); }
 
-.container.active .form-box.Login { transform: translateX(-100%); }
-.container.active .form-box.Register { transform: translateX(-100%); }
+.info-content p {
+  font-size: 15px;
+  color: #ddd;
+}
 
-.container.active .info-content.Login { transform: translateX(-100%); }
-.container.active .info-content.Register { transform: translateX(-100%); }
+/* Curvas coloridas */
+.curved-shape,
+.curved-shape2 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.8s ease;
+  filter: blur(10px);
+}
 
-.container.active .curved-shape { background: linear-gradient(to right,#ff2770 20%, #25252b 100%); }
-.container.active .curved-shape2 { background: linear-gradient(to right,#ff2770 20%, #25252b 100%); }
+.curved-shape {
+  right: 0;
+  background: linear-gradient(to right, #25252b 20%, #ff2770 100%);
+}
+
+.curved-shape2 {
+  right: 0;
+  background: linear-gradient(to right, #25252b 50%, #ff2770 100%);
+}
+
+/* Efeito de transição ao trocar */
+.container.active .form-box.Login {
+  transform: translateX(-100%);
+}
+
+.container.active .form-box.Register {
+  transform: translateX(-100%);
+}
+
+.container.active .info-content.Login {
+  transform: translateX(-100%);
+}
+
+.container.active .info-content.Register {
+  transform: translateX(-100%);
+}
+
+.container.active .curved-shape,
+.container.active .curved-shape2 {
+  background: linear-gradient(to right, #ff2770 20%, #25252b 100%);
+}
