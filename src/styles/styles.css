@@ -154,5 +154,10 @@ body {
     right: 0;
     text-align: right;
     text-transform: uppercase;
-    padding: 0 40px 60px ;
+    padding: 0 40px 60px 150px;
+ }
+
+ .info-content h2 {
+    text-transform: uppercase;
+    
  }
