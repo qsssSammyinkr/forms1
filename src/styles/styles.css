@@ -157,6 +157,12 @@ body {
   padding: 0 40px;
 }
 
+.info-content.Login {
+    right: 0;
+    text-align: right;
+    padding: ;
+}
+
 .info-content h2 {
   font-size: 36px;
   text-transform: uppercase;
