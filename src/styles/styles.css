@@ -55,8 +55,8 @@ body { display:flex; justify-content:center; align-items:center; min-height:100v
 .curved-shape, .curved-shape2 {
   position:absolute; top:0; height:100%; width:50%; transition: all 0.7s ease;
 }
-.curved-shape { right:0; background: linear-gradient(to right,#25252b 100%, #ff2770 20%); }
-.curved-shape2 { right:0; background: linear-gradient(to right,#25252b 100%, #ff2770 50%); }
+.curved-shape { right:0; background: linear-gradient(to right,#25252b 20%, #ff2770 100%); }
+.curved-shape2 { right:0; background: linear-gradient(to right,#25252b 50%, #ff2770 100%); }
 
 .container.active .form-box.Login { transform: translateX(-100%); }
 .container.active .form-box.Register { transform: translateX(-100%); }
@@ -65,4 +65,4 @@ body { display:flex; justify-content:center; align-items:center; min-height:100v
 .container.active .info-content.Register { transform: translateX(-100%); }
 
 .container.active .curved-shape { background: linear-gradient(to right,#ff2770 100%, #25252b 20%); }
-.container.active .curved-shape2 { background: linear-gradient(to right,#ff2770 100%, #25252b 50%); }
+.container.active .curved-shape2 { background: linear-gradient(to right,#ff2770 50%, #25252b 50%); }
