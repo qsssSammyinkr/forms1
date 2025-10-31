@@ -130,33 +130,31 @@ body {
 
 .info-content.Register { display:none; }
 
-/* Curved shapes */
+/* Quadrados coloridos */
 .curved-shape {
   position:absolute;
-  right:0; top:-5px; height:600px; width:850px;
+  right:0; top:0;
+  height:100%;
+  width:50%;
   background: linear-gradient(to right,#25252b 50%, #ff2770 50%);
-  transform: rotate(10deg) skewY(40deg);
-  transform-origin: bottom right;
-  transition:1.5s ease;
+  transition:1s ease;
 }
 
 .container.active .curved-shape {
   background: linear-gradient(to right,#ff2770 50%, #25252b 50%);
-  transform: rotate(0deg) skewY(-33deg);
 }
 
 .curved-shape2 {
-  position:absolute; right:0; top:0; height:100%; width:50%;
+  position:absolute;
+  right:0; top:0;
+  height:100%;
+  width:50%;
   background: linear-gradient(to right,#25252b 50%, #ff2770 50%);
-  transform: rotate(-39deg) skewY(-78deg);
-  transform-origin: top right;
-  border-top:3px solid #ff2770;
-  transition:1.5s ease;
+  transition:1s ease;
 }
 
 .container.active .curved-shape2 {
   background: linear-gradient(to right,#ff2770 50%, #25252b 50%);
-  transform: rotate(-4deg) skewY(-19deg);
 }
 
 /* Toggle forms */
