@@ -150,4 +150,7 @@ body {
     flex-direction: column;
  }
 
- .info-content .Login
+ .info-content.Login {
+    right: 0;
+    text-align: ;
+ }
