@@ -124,4 +124,12 @@ body {
     top: 0;
  }
 
- .regi
+ .regi-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+ }
+
+ .regi-link a{
+    
+ }
