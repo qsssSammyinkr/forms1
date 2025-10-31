@@ -64,5 +64,5 @@ body { display:flex; justify-content:center; align-items:center; min-height:100v
 .container.active .info-content.Login { transform: translateX(-100%); }
 .container.active .info-content.Register { transform: translateX(-100%); }
 
-.container.active .curved-shape { background: linear-gradient(to right,#ff2770 100%, #25252b 20%); }
-.container.active .curved-shape2 { background: linear-gradient(to right,#ff2770 50%, #25252b 50%); }
+.container.active .curved-shape { background: linear-gradient(to right,#ff2770 20%, #25252b 100%); }
+.container.active .curved-shape2 { background: linear-gradient(to right,#ff2770 50%, #25252b 100%); }
