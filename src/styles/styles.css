@@ -149,7 +149,7 @@ body {
   right:0; top:0;
   height:100%;
   width:50%;
-  background: linear-gradient(to right,#25252b 45%, #ff2770 100%);
+  background: linear-gradient(to right,#25252b 16%, #ff2770 100%);
   transition: 5.5 ease;
 }
 
