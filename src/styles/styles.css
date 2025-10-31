@@ -136,4 +136,6 @@ body {
     font-weight: 600;
  }
 
- .regi-link a:
+ .regi-link a:hover {
+    text-decoration: underline;
+ }
