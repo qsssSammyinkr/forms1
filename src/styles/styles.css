@@ -31,7 +31,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 50%; /* metade esquerda */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -144,7 +144,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 50%; /* metade direita */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -155,29 +155,13 @@ body {
 
 .info-content h2 {
   font-size: 36px;
-  line-height: 1.3;
   text-transform: uppercase;
+  line-height: 1.3;
 }
 
 .info-content p {
   font-size: 16px;
   margin-top: 10px;
-}
-
-/* Neon animation */
-.neon-text {
-  color: #ff2770;
-  text-shadow:
-    0 0 5px #ff2770,
-    0 0 10px #ff2770,
-    0 0 20px #ff2770,
-    0 0 40px #ff2770;
-  animation: flicker 1.5s infinite alternate;
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { text-shadow: 0 0 5px #ff2770,0 0 10px #ff2770,0 0 20px #ff2770,0 0 40px #ff2770; }
-  20%, 24%, 55% { text-shadow: 0 0 2px #ff2770,0 0 4px #ff2770,0 0 8px #ff2770,0 0 20px #ff2770; }
 }
 
 /* Curved shape */
