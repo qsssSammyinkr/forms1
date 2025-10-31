@@ -16,7 +16,6 @@ body {
   background: #1f1f26;
 }
 
-/* Container */
 .container {
   position: relative;
   width: 750px;
@@ -26,7 +25,30 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* FORM BOX */
+/* Triângulos decorativos */
+.curved-shape, .curved-shape2 {
+  position: absolute;
+  width: 850px;
+  height: 600px;
+  border-radius: 20px;
+  transition: all 1.2s ease;
+}
+.curved-shape {
+  right: 0;
+  top: -5px;
+  background: linear-gradient(45deg,#1f1f26,#ff2770);
+  transform: rotate(10deg) skewY(40deg);
+  transform-origin: bottom right;
+}
+.curved-shape2 {
+  left: 0;
+  top: -5px;
+  background: linear-gradient(45deg,#25252b,#1f1f26);
+  transform: rotate(-10deg) skewY(-40deg);
+  transform-origin: bottom left;
+}
+
+/* Formulários */
 .form-box {
   position: absolute;
   top: 0;
@@ -41,14 +63,13 @@ body {
 }
 
 .form-box.Login { left: 0; }
-.form-box.Register { right: 0; display: none; }
+.form-box.Register { right: 0; transform: translateX(100%); opacity: 0; }
 
-/* INPUTS */
+/* Inputs */
 .input-box {
   position: relative;
   margin-top: 25px;
 }
-
 .input-box input {
   width: 100%;
   background: transparent;
@@ -59,7 +80,6 @@ body {
   padding: 8px 0;
   font-size: 16px;
 }
-
 .input-box label {
   position: absolute;
   top: 50%;
@@ -68,10 +88,8 @@ body {
   transition: .3s;
   pointer-events: none;
 }
-
 .input-box input:focus ~ label,
 .input-box input:valid ~ label { top: -10px; font-size: 12px; color: #ff2770; }
-
 .input-box i {
   position: absolute;
   top: 50%;
@@ -80,11 +98,10 @@ body {
   font-size: 18px;
   transition: .3s;
 }
-
 .input-box input:focus ~ i,
 .input-box input:valid ~ i { color: #ff2770; }
 
-/* BOTÃO */
+/* Botões */
 .btn {
   margin-top: 25px;
   padding: 10px;
@@ -98,7 +115,6 @@ body {
   position: relative;
   color: #fff;
 }
-
 .btn::before {
   content: "";
   position: absolute;
@@ -110,19 +126,17 @@ body {
   z-index: -1;
   transition: 0.5s;
 }
-
 .btn:hover::before { top: 0; }
 
-/* REGI-LINK */
+/* Links */
 .regi-link {
   margin-top: 20px;
   text-align: center;
 }
-
 .regi-link a { color: #ff2770; font-weight: 600; text-decoration: none; }
 .regi-link a:hover { text-decoration: underline; }
 
-/* INFO CONTENT */
+/* Info content */
 .info-content {
   position: absolute;
   top: 0;
@@ -133,30 +147,16 @@ body {
   justify-content: center;
   padding: 0 40px;
   text-align: center;
-  transition: transform 1s ease;
 }
-
 .info-content.Login { right: 0; text-align: right; }
 .info-content.Register { right: 0; text-align: right; display: none; }
 
-/* TRIÂNGULOS */
-.curved-shape, .curved-shape2 {
-  position: absolute;
-  width: 850px;
-  height: 600px;
-  background: linear-gradient(45deg,#1f1f26,#ff2770);
-  transition: 1.5s ease;
-  border-radius: 20px;
-}
-
-.curved-shape { right: 0; top: -5px; transform: rotate(10deg) skewY(40deg); transform-origin: bottom right; }
-.curved-shape2 { left: 0; top: -5px; transform: rotate(-10deg) skewY(-40deg); transform-origin: bottom left; }
-
-/* ACTIVE */
-.container.active .form-box.Login,
-.container.active .info-content.Login { display: none; }
-.container.active .form-box.Register,
-.container.active .info-content.Register { display: flex; }
+/* Slide ativo */
+.container.active .form-box.Login { transform: translateX(-100%); opacity: 0; }
+.container.active .form-box.Register { transform: translateX(0); opacity: 1; }
 
 .container.active .curved-shape { transform: rotate(-10deg) skewY(-40deg); }
 .container.active .curved-shape2 { transform: rotate(10deg) skewY(40deg); }
+
+.container.active .info-content.Login { display: none; }
+.container.active .info-content.Register { display: flex; }
