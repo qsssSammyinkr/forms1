@@ -77,7 +77,7 @@ body {
  
  .input-box input:focus,
  .input-box input:valid { 
-    top: -5px;
+    border-bottom: 2px solid #ff2770;
  }
 
 .input-box i {
@@ -92,4 +92,8 @@ body {
  .input-box input:focus ~ i,
  .input-box input:valid ~ i {
     color: #ff2770;
+ }
+
+ .btn {
+    
  }
