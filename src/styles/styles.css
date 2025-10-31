@@ -149,12 +149,12 @@ body {
   right:0; top:0;
   height:100%;
   width:50%;
-  background: linear-gradient(to right,#25252b 50%, #ff2770 50%);
+  background: linear-gradient(to right,#25252b 25%, #ff2770 100%);
   transition:1s ease;
 }
 
 .container.active .curved-shape2 {
-  background: linear-gradient(to right,#ff2770 50%, #25252b 50%);
+  background: linear-gradient(to right,#ff2770 55%, #25252b 50%);
 }
 
 /* Toggle forms */
