@@ -49,7 +49,7 @@ body {
     transform: translateY(0%);
     transition: .7s;
     opacity: 1;
-    transition: ca;
+    transition: calc(.1s * var(--D));
 }
 
 .container.active .form-box.Login .animation {
