@@ -87,10 +87,10 @@ body {
     right: 0;
     font-size: 18px;
     transform: translateY(-50%);
+    transition: .5s;
 }
 
- .input-box input:focus ~ label,
- .input-box input:valid ~ label {
-    top: -5px;
+ .input-box input:focus ~ i,
+ .input-box input:valid ~ i {
     color: #ff2770;
  }
