@@ -217,7 +217,7 @@ body {
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(0deg) skewY(100deg); /* animação suave para toggle */
+  transform: rotate(78deg) skewY(92deg); /* animação suave para toggle */
   transition-delay: 1.2s;
 }
 
