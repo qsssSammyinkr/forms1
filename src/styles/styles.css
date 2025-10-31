@@ -146,5 +146,8 @@ body {
     height: 100%;
     width: 50%;
     display: flex;
-    just
+    justify-content: center;
+    flex-direction: column;
  }
+
+ .info-content .Login
