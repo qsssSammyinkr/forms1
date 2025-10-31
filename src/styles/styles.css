@@ -197,7 +197,7 @@ body {
 }
 
 .container.active .curved-shape {
-  transform: rotate(0deg) skewY(0deg);
+  transform: rotate(-4deg) skewY(-19deg);
 }
 
 /* Curved shape secundário (preto) */
@@ -215,7 +215,7 @@ body {
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(-4deg) skewY(-19deg); /* animação suave para toggle */
+  transform: rotate(0deg) skewY(1deg); /* animação suave para toggle */
   transition-delay: 1.2s;
 }
 
