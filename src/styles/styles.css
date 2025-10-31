@@ -193,7 +193,7 @@ body {
   background: linear-gradient(45deg,#25252b,#ff2770);
   transform: rotate(0deg) skewY(0deg);
   transform-origin: bottom right;
-  transition: .5s;
+  transition: 1.5s;
 }
 
 .container.active .curved-shape {
