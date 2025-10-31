@@ -18,7 +18,7 @@ body {
 
 .container {
   position: relative;
-  width: 750px;a
+  width: 750px;
   height: 450px;
   border: 2px solid #ff2770;
   box-shadow: 0 0 25px #ff2770;
@@ -26,16 +26,16 @@ body {
   overflow: hidden;
 }
 
-/* FORM BOX - esquerda */
+/* FORM */
 .container .form-box {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* metade esquerda */
+  width: 50%;
   height: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   padding: 40px;
 }
 
@@ -43,18 +43,6 @@ body {
   display: none;
   right: 0;
   padding: 0 60px;
-}
-
-.form-box.Login .animation {
-    transform: translateY(0%);
-    transition: .7s;
-    opacity: 1;
-    transition: calc(.1s * var(--D));
-}
-
-.container.active .form-box.Login .animation {
-    transform: translateY(-120%);
-    opacity: 0;
 }
 
 .form-box h2 {
@@ -76,7 +64,6 @@ body {
   outline: none;
   border-bottom: 2px solid #fff;
   font-size: 16px;
-  color: #fff;
   padding-right: 23px;
 }
 
@@ -86,12 +73,11 @@ body {
   left: 0;
   transform: translateY(-50%);
   font-size: 16px;
-  color: #fff;
   transition: .5s;
 }
 
 .input-box input:focus,
-.input-box input:valid { 
+.input-box input:valid {
   border-bottom: 2px solid #ff2770;
 }
 
@@ -109,7 +95,7 @@ body {
   color: #ff2770;
 }
 
-/* Botão */
+/* BOTÃO */
 .btn {
   position: relative;
   width: 100%;
@@ -137,10 +123,11 @@ body {
   transition: .5s;
 }
 
-.btn:hover:before {
+.btn:hover::before {
   top: 0;
 }
 
+/* LINKS */
 .regi-link {
   font-size: 14px;
   text-align: center;
@@ -148,7 +135,6 @@ body {
 }
 
 .regi-link a {
-  background: none;
   color: #ff2770;
   font-weight: 600;
 }
@@ -157,31 +143,18 @@ body {
   text-decoration: underline;
 }
 
-/* INFO CONTENT - direita */
+/* INFO CONTENT */
 .info-content {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%; /* metade direita */
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0 40px;
-}
-
-.info-content.Login {
-  right: 0;
-  text-align: right;
-  padding: 0 40px 60px 150px;
-}
-
-.info-content.Register {
-  right: 0;
-  text-align: right;
-  padding: 0 40px 60px 150px;
-  display: none;
 }
 
 .info-content h2 {
@@ -195,8 +168,8 @@ body {
   margin-top: 10px;
 }
 
-/* Curved shape principal (rosa) */
-.container .curved-shape {
+/* TRIÂNGULOS */
+.curved-shape {
   position: absolute;
   right: 0;
   top: -5px;
@@ -212,13 +185,12 @@ body {
   transform: rotate(-0deg) skewY(-33deg);
 }
 
-/* Curved shape secundário (preto) */
-.container .curved-shape2 {
+.curved-shape2 {
   position: absolute;
-  right: 0;       /* lado direito do WELCOME */
+  right: 0;
   top: 0;
-  height: 100%;    /* ocupa toda altura do container */
-  width: 50%;      /* metade direita */
+  height: 100%;
+  width: 50%;
   background: #25252b;
   border-top: 3px solid #ff2770;
   transform: rotate(-39deg) skewY(-78deg);
@@ -227,22 +199,36 @@ body {
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(-30deg) skewY(-10deg);/* animação suave para toggle */
+  transform: rotate(-30deg) skewY(-10deg);
   transition-delay: 1.2s;
 }
 
-/* Alternância de formulários */
+/* ANIMAÇÕES EM CASCATA */
+.animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: calc(0.1s * var(--D));
+}
+
+.show .animation,
+.container.active .animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternância */
 .form-box.Register,
 .info-content.Register {
-  display: none; /* escondido por padrão */
+  display: none;
 }
 
 .container.active .form-box.Login,
 .container.active .info-content.Login {
-  display: none; /* esconder login */
+  display: none;
 }
 
 .container.active .form-box.Register,
 .container.active .info-content.Register {
-  display: flex; /* mostrar registro */
+  display: flex;
 }
