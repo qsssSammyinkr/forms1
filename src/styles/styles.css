@@ -21,7 +21,7 @@ body {
     width: 750px;
     height: 450px;
     border: 2px solid #ff2770;
-    box-shadow: 0 0 25px #ff2770;
+    box-shadow: 0 0 25px #0474ec;
 }
 
 .container .form-box {
@@ -44,4 +44,9 @@ body {
     width: 100%;
     height: 50px;
     margin-top: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
 }
