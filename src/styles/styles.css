@@ -39,6 +39,9 @@ body {
     text-align: center;
 }
 
-.form-box .inout-box {
-    
+.form-box .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
 }
