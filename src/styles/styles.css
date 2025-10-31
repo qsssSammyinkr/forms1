@@ -160,7 +160,14 @@ body {
 .info-content.Login {
     right: 0;
     text-align: right;
-    padding: ;
+    padding: 0 40px 60px 150px;
+}
+
+.info-content.Register {
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+    display: none;
 }
 
 .info-content h2 {
