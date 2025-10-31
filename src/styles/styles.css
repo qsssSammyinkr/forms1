@@ -46,11 +46,15 @@ body {
 }
 
 .form-box.Login .animation {
-    transform: translateY(-120%);
+    transform: translateY(0%);
+    transition: .7s;
+    opacity: 1;
+    transition: ca;
 }
 
 .container.active .form-box.Login .animation {
-    transform: translateY(-12);
+    transform: translateY(-120%);
+    opacity: 0;
 }
 
 .form-box h2 {
