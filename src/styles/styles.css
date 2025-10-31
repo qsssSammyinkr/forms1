@@ -42,6 +42,7 @@ body {
 .form-box.Register {
     display: none;
     right: 0;
+    padding: 0 60px;
 }
 
 .form-box h2 {
