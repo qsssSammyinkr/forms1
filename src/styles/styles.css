@@ -139,3 +139,9 @@ body {
  .regi-link a:hover {
     text-decoration: underline;
  }
+
+ .info-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+ }
