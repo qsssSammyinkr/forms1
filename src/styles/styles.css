@@ -14,6 +14,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #25252b;
+  overflow: hidden;
 }
 
 .container {
@@ -24,33 +25,47 @@ body {
   box-shadow: 0 0 25px #ff2770;
   border-radius: 15px;
   overflow: hidden;
+  transition: transform 1s ease;
 }
 
-/* FORM */
-.container .form-box {
+.container.active {
+  transform: translateX(-50px);
+}
+
+/* ---- Formulários ---- */
+.form-box {
   position: absolute;
   top: 0;
-  left: 0;
   width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   padding: 40px;
+  transition: all 1s ease;
+}
+
+.form-box.Login {
+  left: 0;
 }
 
 .form-box.Register {
-  display: none;
+  right: -50%;
+  opacity: 0;
+}
+
+/* Slide animation */
+.container.active .form-box.Login {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.container.active .form-box.Register {
   right: 0;
-  padding: 0 60px;
+  opacity: 1;
 }
 
-.form-box h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* Inputs */
 .input-box {
   position: relative;
   width: 100%;
@@ -64,7 +79,7 @@ body {
   outline: none;
   border-bottom: 2px solid #fff;
   font-size: 16px;
-  padding-right: 23px;
+  color: #fff;
 }
 
 .input-box label {
@@ -85,9 +100,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  font-size: 18px;
   transform: translateY(-50%);
-  transition: .5s;
 }
 
 .input-box input:focus ~ i,
@@ -95,9 +108,8 @@ body {
   color: #ff2770;
 }
 
-/* BOTÃO */
+/* Botão */
 .btn {
-  position: relative;
   width: 100%;
   height: 45px;
   background: transparent;
@@ -106,9 +118,10 @@ body {
   font-size: 16px;
   font-weight: 600;
   border: 2px solid #ff2770;
-  overflow: hidden;
-  z-index: 1;
   margin-top: 25px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .btn::before {
@@ -127,7 +140,6 @@ body {
   top: 0;
 }
 
-/* LINKS */
 .regi-link {
   font-size: 14px;
   text-align: center;
@@ -155,20 +167,18 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 40px;
+  transition: 1s ease;
 }
 
-.info-content h2 {
-  font-size: 36px;
-  text-transform: uppercase;
-  line-height: 1.3;
+.container.active .info-content.Login {
+  opacity: 0;
 }
 
-.info-content p {
-  font-size: 16px;
-  margin-top: 10px;
+.container.active .info-content.Register {
+  opacity: 1;
 }
 
-/* TRIÂNGULOS */
+/* Curves */
 .curved-shape {
   position: absolute;
   right: 0;
@@ -201,34 +211,4 @@ body {
 .container.active .curved-shape2 {
   transform: rotate(-30deg) skewY(-10deg);
   transition-delay: 1.2s;
-}
-
-/* ANIMAÇÕES EM CASCATA */
-.animation {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  transition-delay: calc(0.1s * var(--D));
-}
-
-.show .animation,
-.container.active .animation {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Alternância */
-.form-box.Register,
-.info-content.Register {
-  display: none;
-}
-
-.container.active .form-box.Login,
-.container.active .info-content.Login {
-  display: none;
-}
-
-.container.active .form-box.Register,
-.container.active .info-content.Register {
-  display: flex;
 }

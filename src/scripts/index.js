@@ -1,18 +1,11 @@
-const container = document.querySelector('.container');
-const signUpLink = document.querySelector('.SignUpLink');
-const signInLink = document.querySelector('.SignInLink');
+const container = document.getElementById('container');
+const signUpLink = document.getElementById('SignUpLink');
+const signInLink = document.getElementById('SignInLink');
 
-signUpLink.addEventListener('click', (e) => {
-  e.preventDefault();
+signUpLink.addEventListener('click', () => {
   container.classList.add('active');
 });
 
-signInLink.addEventListener('click', (e) => {
-  e.preventDefault();
+signInLink.addEventListener('click', () => {
   container.classList.remove('active');
-});
-
-/* Animação automática na entrada */
-window.addEventListener('load', () => {
-  document.querySelector('.container').classList.add('show');
 });
