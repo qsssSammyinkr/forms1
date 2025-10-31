@@ -1,13 +1,13 @@
-const container = document.getElementById('container');
-const signUpLink = document.getElementById('SignUpLink');
-const signInLink = document.getElementById('SignInLink');
+const container = document.querySelector('.container');
+const SignUpLink = document.querySelector('.SignUpLink');
+const SignInLink = document.querySelector('.SignInLink');
 
-signUpLink.addEventListener('click', (e) => {
+SignUpLink.addEventListener('click', e => {
   e.preventDefault();
   container.classList.add('active');
 });
 
-signInLink.addEventListener('click', (e) => {
+SignInLink.addEventListener('click', e => {
   e.preventDefault();
   container.classList.remove('active');
 });
