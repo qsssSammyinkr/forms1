@@ -173,4 +173,6 @@ body {
     top: -5px;
     height: 600px;
     width: 850px;
+    background: linear-gradient(45deg,#25252b,#ff2770);
+    transform: ;
  }
