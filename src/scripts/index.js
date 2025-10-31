@@ -1,7 +1,13 @@
 const container = document.querySelector('.container');
-const LoginLink = document.querySelector('.SignInLink');
-const RegisterLink = document.querySelector('.SignUpLink');
+const SignUpLink = document.querySelector('.SignUpLink');
+const SignInLink = document.querySelector('.SignInLink');
 
-RegisterLink.addEventListener('click', () => {
-    container.classList.add('active');
+SignUpLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.add('active');
+});
+
+SignInLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.remove('active');
 });
