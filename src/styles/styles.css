@@ -169,4 +169,8 @@ body {
 
  .container .curved-shape {
     position: absolute;
+    right: 0;
+    top: -5px;
+    height: 600px;
+    width: 850px;
  }
