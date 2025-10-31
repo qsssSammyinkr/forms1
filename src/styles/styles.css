@@ -166,3 +166,7 @@ body {
  .info-content p {
     font-size: 16px;
  }
+
+ .container .curved-shape {
+    position: absolute;
+ }
