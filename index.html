@@ -1,6 +1,6 @@
 <!--
 Arquivo: index.html
-Abra este arquivo no navegador. style.css e script.js são arquivos separados na mesma pasta.
+Sistema de login e criação de conta com armazenamento em LocalStorage (demo)
 -->
 
 
@@ -9,20 +9,14 @@ Abra este arquivo no navegador. style.css e script.js são arquivos separados na
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Login — Demo</title>
+<title>Login / Cadastro — Demo</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <main class="container">
-<aside class="brand">
-<h1>Minha App</h1>
-<p>Bem-vindo! Faça login para continuar.</p>
-</aside>
-
-
 <section class="login-card">
-<form id="loginForm" novalidate>
-<h2>Entrar</h2>
+<form id="authForm" novalidate>
+<h2 id="formTitle">Entrar</h2>
 
 
 <div class="field">
@@ -34,39 +28,17 @@ Abra este arquivo no navegador. style.css e script.js são arquivos separados na
 
 <div class="field">
 <label for="password">Senha</label>
-<div class="password-wrap">
 <input id="password" name="password" type="password" placeholder="••••••••" minlength="6" required />
-<button type="button" id="togglePwd" aria-label="Mostrar senha">👁️</button>
-</div>
 <small class="error" data-for="password"></small>
 </div>
 
 
-<div class="actions">
-<label class="remember">
-<input type="checkbox" id="remember" name="remember" /> Lembrar-me
-</label>
-<a href="#" class="forgot">Esqueci a senha</a>
-</div>
-
-
 <button class="btn primary" type="submit">Entrar</button>
+<p class="toggleForm">Não tem conta? <a href="#" id="switchForm">Cadastre-se</a></p>
 
 
-<div class="or">ou</div>
-
-
-<div class="socials">
-<button type="button" class="btn google">Continuar com Google</button>
-<button type="button" class="btn github">Continuar com GitHub</button>
-</div>
-
-
-<p class="signup">Ainda não tem conta? <a href="#">Cadastre‑se</a></p>
+<div class="note" id="note">Esta é uma demo — os dados são salvos localmente no navegador.</div>
 </form>
-
-
-<footer class="note">Esta é uma demo — a autenticação real não está implementada.</footer>
 </section>
 </main>
 
