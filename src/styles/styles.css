@@ -210,6 +210,7 @@ body {
   border-top: 3px solid #ff2770;
   transform: rotate(0deg) skewY(0deg);
   transform-origin: bottom right;
+  transition: 1.5s ease;
 }
 
 .container.active .curved-shape2 {
