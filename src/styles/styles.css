@@ -81,3 +81,10 @@ body {
     color: #ff2770;
  }
 
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: tr;
+}
