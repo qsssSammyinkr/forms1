@@ -130,6 +130,10 @@ body {
     margin: 20px 0 10px;
  }
 
- .regi-link a{
-    
+ .regi-link a {
+    background: none;
+    color: #ff2770;
+    font-weight: 600;
  }
+
+ .regi-link a:
