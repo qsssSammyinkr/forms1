@@ -209,13 +209,13 @@ body {
   width: 50%;      /* metade direita */
   background: #25252b;
   border-top: 3px solid #ff2770;
-  transform: rotate(-8deg) skewY(-28deg);
+  transform: rotate(-39deg) skewY(-78deg);
   transform-origin: top right;
   transition: 1.5s ease;
 }
 
 .container.active .curved-shape2 {
-  transform: rotate(-4deg) skewY(-28deg); /* animação suave para toggle */
+  transform: rotate(-10deg) skewY(-18deg); /* animação suave para toggle */
 }
 
 /* Alternância de formulários */
