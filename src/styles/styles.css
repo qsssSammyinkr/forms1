@@ -21,12 +21,13 @@ body {
   width: 750px;
   height: 450px;
   border: 2px solid #ff2770;
+  box-shadow: 0 0 25px #ff2770;
   border-radius: 15px;
   overflow: hidden;
 }
 
-/* FORM BOX */
-.container .form-box {
+/* FORM BOX - esquerda */
+.form-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,6 +42,7 @@ body {
 .form-box.Register {
   display: none;
   right: 0;
+  padding: 0 40px;
 }
 
 .form-box h2 {
@@ -77,7 +79,7 @@ body {
 }
 
 .input-box input:focus,
-.input-box input:valid {
+.input-box input:valid { 
   border-bottom: 2px solid #ff2770;
 }
 
@@ -134,6 +136,7 @@ body {
 }
 
 .regi-link a {
+  background: none;
   color: #ff2770;
   font-weight: 600;
 }
@@ -142,7 +145,7 @@ body {
   text-decoration: underline;
 }
 
-/* INFO CONTENT */
+/* INFO CONTENT - direita */
 .info-content {
   position: absolute;
   top: 0;
@@ -156,16 +159,8 @@ body {
   padding: 0 40px;
 }
 
-.info-content.Login {
-  display: flex;
-  text-align: right;
-  padding: 0 40px 60px 150px;
-}
-
 .info-content.Register {
   display: none;
-  text-align: right;
-  padding: 0 40px 60px 150px;
 }
 
 .info-content h2 {
@@ -179,48 +174,34 @@ body {
   margin-top: 10px;
 }
 
-/* CURVED SHAPES */
+/* Curvas de fundo */
 .curved-shape {
   position: absolute;
-  right: -50px;
-  top: -50px;
+  top: -150px;
+  right: -100px;
   width: 500px;
-  height: 500px;
-  background: linear-gradient(45deg,#25252b,#ff2770);
-  border-radius: 50%;
-  transition: 1.5s ease;
+  height: 650px;
+  background: linear-gradient(135deg, #ff2770, #ff66a3);
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+  transition: 1s ease;
   z-index: 0;
 }
 
 .curved-shape2 {
   position: absolute;
+  top: -100px;
   right: -50px;
-  top: -50px;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 600px;
   background: #25252b;
-  border-radius: 50%;
-  transition: 1.5s ease;
+  border-top-left-radius: 250px;
+  border-bottom-left-radius: 250px;
+  transition: 1s ease;
   z-index: 1;
 }
 
-.container.active .curved-shape {
-  right: -150px;
-  top: -150px;
-}
-
-.container.active .curved-shape2 {
-  right: -150px;
-  top: -150px;
-  transform: rotate(-20deg);
-}
-
-/* Alternância Login/Register */
-.form-box.Register,
-.info-content.Register {
-  display: none;
-}
-
+/* Estados ativos (Register) */
 .container.active .form-box.Login,
 .container.active .info-content.Login {
   display: none;
@@ -229,4 +210,12 @@ body {
 .container.active .form-box.Register,
 .container.active .info-content.Register {
   display: flex;
+}
+
+.container.active .curved-shape {
+  transform: rotate(-10deg);
+}
+
+.container.active .curved-shape2 {
+  transform: rotate(-12deg);
 }
